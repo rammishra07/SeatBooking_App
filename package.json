@@ -1,19 +1,29 @@
 {
   "name": "seatbooking_app",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Full-stack MERN Event Seat Booking application with concurrency-safe transactional checkout and role-based access control.",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "client": "npm --prefix client run dev",
+    "server": "npm --prefix server run dev",
+    "seed": "node server/seedAdmin.js",
+    "build:client": "npm --prefix client run build",
+    "start": "node server/index.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rammishra07/SeatBooking_App.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
+  "keywords": [
+    "mern",
+    "seat-booking",
+    "mongodb-transactions",
+    "concurrency-safe",
+    "react19",
+    "express5",
+    "jwt"
+  ],
+  "author": "Ram Mishra",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/rammishra07/SeatBooking_App/issues"
   },
