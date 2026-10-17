@@ -248,7 +248,12 @@ export default function AdminDashboard() {
                         max="200"
                         required
                         value={form.totalSeats}
-                        onChange={(e) => setForm({ ...form, totalSeats: Number(e.target.value) })}
+                        onChange={(e) =>
+                          setForm({
+                            ...form,
+                            totalSeats: e.target.value === "" ? "" : Number(e.target.value),
+                          })
+                        }
                         className="form-control"
                       />
                     </div>
@@ -260,7 +265,12 @@ export default function AdminDashboard() {
                         min="0"
                         required
                         value={form.seatPrice}
-                        onChange={(e) => setForm({ ...form, seatPrice: Number(e.target.value) })}
+                        onChange={(e) =>
+                          setForm({
+                            ...form,
+                            seatPrice: e.target.value === "" ? "" : Number(e.target.value),
+                          })
+                        }
                         className="form-control"
                       />
                     </div>
